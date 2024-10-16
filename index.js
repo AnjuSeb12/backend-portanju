@@ -23,7 +23,7 @@ const contactSchema = new mongoose.Schema({
 
 const Contact = mongoose.model('Contact', contactSchema);
 
-app.post('/api/contact', async (req, res) => {
+app.post('/api/v1/contact', async (req, res) => {
   const { name, email, message } = req.body;
   try {
     const newContact = new Contact({ name, email, message });
